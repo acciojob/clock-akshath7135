@@ -1,18 +1,1 @@
 /*  your css code here. If applicable */
-body {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    padding: 20px;
-}
-
-#timer {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    padding: 10px;
-    border: 2px solid #007BFF;
-    display: inline-block;
-    border-radius: 5px;
-    background-color: white;
-}

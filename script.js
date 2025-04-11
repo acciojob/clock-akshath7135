@@ -1,13 +1,27 @@
 //your JS code here. If required.
-function updateTime() {
-    const timerElement = document.getElementById("timer");
+// Function to update the timer
+function updateTimer() {
+    // Get the current date and time
     const now = new Date();
-    const formattedTime = now.toLocaleString(); // Format Date and Time
-    timerElement.innerText = formattedTime;
+
+    // Format the date and time
+    const options = { 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric', 
+        hour: '2-digit', 
+        minute: '2-digit', 
+        second: '2-digit', 
+        hour12: true 
+    };
+    const formattedTime = now.toLocaleString('en-US', options);
+
+    // Display the formatted time in the timer element
+    document.getElementById('timer').textContent = formattedTime;
 }
 
-// Update timer every second
-setInterval(updateTime, 1000);
+// Update the timer every second
+setInterval(updateTimer, 1000);
 
-// Initialize timer immediately
-updateTime();
+// Initial call to display the timer immediately on page load
+updateTimer();
